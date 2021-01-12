@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5217f72d-4252-42d5-a114-d0e11476cb85" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/0e/bbc52d3d/Type.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scrpits/Physics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scrpits/Placer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scrpits/Constants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/knob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Physics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Placer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KnobMode.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OutputKnob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Knob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputKnob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mv9UAqxTb2uscToKOjAr7jIAPo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Line.Create" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="C:\Users\mattb\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\202.7660.16\lib\ReSharperHost\JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Assembly-CSharp.csproj" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.1" />
+      <option name="CLASS_NAME" value="Line" />
+      <option name="METHOD_NAME" value="Create" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6492">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="6492" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Static Method.Line.Create" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5217f72d-4252-42d5-a114-d0e11476cb85" name="Default Changelist" comment="" />
+      <created>1610363211926</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610363211926</updated>
+      <workItem from="1610363221091" duration="5857000" />
+      <workItem from="1610370345133" duration="26568000" />
+      <workItem from="1610460751982" duration="2617000" />
+      <workItem from="1610463381010" duration="10161000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="472" height="464" key="DebuggerActiveHint" timestamp="1610470673914">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="472" height="464" key="DebuggerActiveHint/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470673914" />
+    <state width="2517" height="534" key="GridCell.Tab.0.bottom" timestamp="1610470616095">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616095" />
+    <state width="2517" height="534" key="GridCell.Tab.0.center" timestamp="1610470616095">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.center/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616095" />
+    <state width="2517" height="534" key="GridCell.Tab.0.left" timestamp="1610470616095">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.left/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616095" />
+    <state width="2517" height="534" key="GridCell.Tab.0.right" timestamp="1610470616095">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.right/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616095" />
+    <state width="2517" height="534" key="GridCell.Tab.1.bottom" timestamp="1610470623245">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.bottom/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470623245" />
+    <state width="2517" height="534" key="GridCell.Tab.1.center" timestamp="1610470623245">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.center/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470623245" />
+    <state width="2517" height="534" key="GridCell.Tab.1.left" timestamp="1610470623245">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.left/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470623245" />
+    <state width="2517" height="534" key="GridCell.Tab.1.right" timestamp="1610470623245">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.right/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470623245" />
+    <state width="2517" height="534" key="GridCell.Tab.2.bottom" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.bottom/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.2.center" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.center/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.2.left" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.left/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.2.right" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.right/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.3.bottom" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.bottom/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.3.center" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.center/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.3.left" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.left/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state width="2517" height="534" key="GridCell.Tab.3.right" timestamp="1610470616010">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.right/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610470616010" />
+    <state x="1047" y="444" key="RiderGenerateDialog" timestamp="1610475682825">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1047" y="444" key="RiderGenerateDialog/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610475682825" />
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1610469056036">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440/2560.257.1920.1080@0.0.2560.1440" timestamp="1610469056036" />
+  </component>
+</project>
