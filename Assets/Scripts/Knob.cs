@@ -56,7 +56,7 @@ public abstract class Knob : MonoBehaviour
 
 		Constants.C.knobs.Add(this);
 
-		LineDraw = Line.Create(transform, transform.position, transform.position);
+		LineDraw = Line.Create(transform.position, transform.position);
 
 		ExtendedStart();
 	}
@@ -108,6 +108,7 @@ public abstract class Knob : MonoBehaviour
 					}
 				}
 
+				LineDraw.UpdatePosition(0, transform.position);
 				LineDraw.UpdatePosition(LineDraw.GetNumPos() - 1, worldPosOfMouse);
 				LineDraw.SetActive(IsActive);
 				
@@ -167,13 +168,14 @@ public abstract class Knob : MonoBehaviour
 			OutputKnob outputKnob = (OutputKnob) this;
 			foreach (var outputKnobConnection in outputKnob.Connections)
 			{
-				outputKnobConnection.Value.UpdatePosition(outputKnob.transform.position, outputKnobConnection.Key.transform.position);
+				outputKnobConnection.Value.UpdatePosition(0, outputKnob.transform.position);
 			}
 		}
 		else
 		{
 			InputKnob inputKnob = (InputKnob) this;
-			inputKnob.Parent.Connections[inputKnob].UpdatePosition(inputKnob.Parent.transform.position, inputKnob.transform.position);
+			var parentConnection = inputKnob.Parent.Connections[inputKnob];
+			parentConnection.UpdatePosition(parentConnection.GetNumPos() - 1, inputKnob.transform.position);
 		}
 
 		transform.position = worldPosOfMouse;

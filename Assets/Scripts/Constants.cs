@@ -15,6 +15,8 @@ public class Constants : MonoBehaviour
 
 	public Material lineMaterial;
 
+	public Transform lineParent;
+
 	private void Awake()
 	{
 		C = this;

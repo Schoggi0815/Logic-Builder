@@ -16,11 +16,13 @@ public class Line : MonoBehaviour
 		_lineRenderer = GetComponent<LineRenderer>();
 	}
 
-	public static Line Create(Transform parent, Vector3 from, Vector3 to)
+	public static Line Create(Vector3 from, Vector3 to)
 	{
 		GameObject gameObject = new GameObject("Line");
 
-		gameObject.transform.parent = parent;
+		gameObject.layer = 8;
+
+		gameObject.transform.parent = Constants.C.lineParent;
 
 		var line = gameObject.AddComponent<Line>();
 		var lineRenderer = gameObject.AddComponent<LineRenderer>();
@@ -34,7 +36,7 @@ public class Line : MonoBehaviour
 
 		lineRenderer.numCornerVertices = Smoothness;
 		
-		lineRenderer.SetPositions(new []{from, to});
+		lineRenderer.SetPositions(new []{GetLinePos(from), GetLinePos(to)});
 
 		return line;
 	}
@@ -42,6 +44,8 @@ public class Line : MonoBehaviour
 	public static Line Create(Line lineToCopy, InputKnob knobParent)
 	{
 		GameObject gameObject = new GameObject("Line");
+
+		gameObject.layer = 8;
 
 		gameObject.transform.parent = lineToCopy.transform.parent;
 
@@ -84,12 +88,12 @@ public class Line : MonoBehaviour
 
 	public void UpdatePosition(Vector3 from, Vector3 to)
 	{
-		_lineRenderer.SetPositions(new []{from, to});
+		_lineRenderer.SetPositions(new []{GetLinePos(from), GetLinePos(to)});
 	}
 	
 	public void UpdatePosition(int index, Vector3 pos)
 	{
-		_lineRenderer.SetPosition(index, pos);
+		_lineRenderer.SetPosition(index, GetLinePos(pos));
 	}
 
 	public void AddAfter(Vector3 pos)
@@ -106,17 +110,17 @@ public class Line : MonoBehaviour
 		{
 			if (i == index)
 			{
-				newPositions[i] = pos;
+				newPositions[i] = GetLinePos(pos);
 				continue;
 			}
 
 			if (i >= index)
 			{
-				newPositions[i] = positions[i - 1];
+				newPositions[i] = GetLinePos(positions[i - 1]);
 				continue;
 			}
 
-			newPositions[i] = positions[i];
+			newPositions[i] = GetLinePos(positions[i]);
 		}
 
 		_lineRenderer.positionCount += 1;
@@ -169,5 +173,10 @@ public class Line : MonoBehaviour
 	private void OnMouseExit()
 	{
 		_lineRenderer.material.color = _isActive ? Constants.C.knobActiveColor : Constants.C.knobColor;
+	}
+
+	private static Vector3 GetLinePos(Vector3 vector3)
+	{
+		return new Vector3(vector3.x, vector3.y, 1);
 	}
 }

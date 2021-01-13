@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &150908505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150908506}
+  m_Layer: 0
+  m_Name: Lines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150908506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150908505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &369290273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,7 +348,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutputKnob
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9129315024092707890, guid: e1e2dd75e1cfb534e82033cb84b15e27, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1e2dd75e1cfb534e82033cb84b15e27, type: 3}
 --- !u!1001 &1061103807
 PrefabInstance:
@@ -375,7 +406,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutputKnob (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9129315024092707890, guid: e1e2dd75e1cfb534e82033cb84b15e27, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1e2dd75e1cfb534e82033cb84b15e27, type: 3}
 --- !u!1001 &1600386036
 PrefabInstance:
@@ -591,6 +623,7 @@ MonoBehaviour:
   knobSelectedColor: {r: 0, g: 0.20818922, b: 0.3962264, a: 1}
   knobColor: {r: 0, g: 0, b: 0, a: 1}
   lineMaterial: {fileID: 2100000, guid: cdfd69e4db60b4b4c8cce80266785f5b, type: 2}
+  lineParent: {fileID: 150908506}
 --- !u!4 &1919802416
 Transform:
   m_ObjectHideFlags: 0

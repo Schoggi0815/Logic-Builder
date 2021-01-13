@@ -47,8 +47,6 @@ public class InputKnob : Knob
 				
 				_parent.Connections.Remove(this);
 			}
-			
-			
 
 			_parent = value;
 		}
