@@ -7,21 +7,25 @@ public class Line : MonoBehaviour
 
 	private InputKnob _parent;
 
+	private EdgeCollider2D _edgeCollider;
+
 	private const int Smoothness = 5;
 
 	private bool _isActive;
+
+	private bool _createMesh;
 
 	private void Start()
 	{
 		_lineRenderer = GetComponent<LineRenderer>();
 	}
 
-	public static Line Create(Vector3 from, Vector3 to)
+	public static Line Create(Vector3 from, Vector3 to, bool createMesh)
 	{
-		GameObject gameObject = new GameObject("Line");
+		GameObject gameObject = new GameObject("Line") {layer = 8};
 
-		gameObject.layer = 8;
-
+		gameObject.transform.position = new Vector3(0, 0, 1);
+		
 		gameObject.transform.parent = Constants.C.lineParent;
 
 		var line = gameObject.AddComponent<Line>();
@@ -29,21 +33,34 @@ public class Line : MonoBehaviour
 
 		line._lineRenderer = lineRenderer;
 
+		line._createMesh = createMesh;
+
 		lineRenderer.widthMultiplier = .2f;
 		lineRenderer.material = new Material(Constants.C.lineMaterial) {color = Constants.C.knobColor};
 
 		lineRenderer.positionCount = 2;
 
 		lineRenderer.numCornerVertices = Smoothness;
+
+		line._edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
+
+		line._edgeCollider.edgeRadius = .1f;
+		
+		if (line._createMesh)
+		{
+			line.SetMesh();
+		}
 		
 		lineRenderer.SetPositions(new []{GetLinePos(from), GetLinePos(to)});
 
 		return line;
 	}
 	
-	public static Line Create(Line lineToCopy, InputKnob knobParent)
+	public static Line Create(Line lineToCopy, InputKnob knobParent, bool createMesh)
 	{
 		GameObject gameObject = new GameObject("Line");
+		
+		gameObject.transform.position = new Vector3(0, 0, 1);
 
 		gameObject.layer = 8;
 
@@ -53,6 +70,8 @@ public class Line : MonoBehaviour
 		var lineRenderer = gameObject.AddComponent<LineRenderer>();
 
 		line._lineRenderer = lineRenderer;
+
+		line._createMesh = createMesh;
 
 		line._parent = knobParent;
 
@@ -69,13 +88,14 @@ public class Line : MonoBehaviour
 		
 		lineRenderer.SetPositions(positions);
 
-		var meshCollider = gameObject.AddComponent<MeshCollider>();
+		line._edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
 		
-		var mesh = new Mesh();
-		
-		lineRenderer.BakeMesh(mesh, true);
+		line._edgeCollider.edgeRadius = .1f;
 
-		meshCollider.sharedMesh = mesh;
+		if (line._createMesh)
+		{
+			line.SetMesh();
+		}
 
 		return line;
 	}
@@ -86,14 +106,14 @@ public class Line : MonoBehaviour
 		_lineRenderer.material.color = active ? Constants.C.knobActiveColor : Constants.C.knobColor;
 	}
 
-	public void UpdatePosition(Vector3 from, Vector3 to)
-	{
-		_lineRenderer.SetPositions(new []{GetLinePos(from), GetLinePos(to)});
-	}
-	
 	public void UpdatePosition(int index, Vector3 pos)
 	{
 		_lineRenderer.SetPosition(index, GetLinePos(pos));
+
+		if (_createMesh)
+		{
+			SetMesh();
+		}
 	}
 
 	public void AddAfter(Vector3 pos)
@@ -178,5 +198,20 @@ public class Line : MonoBehaviour
 	private static Vector3 GetLinePos(Vector3 vector3)
 	{
 		return new Vector3(vector3.x, vector3.y, 1);
+	}
+
+	private void SetMesh()
+	{
+		Vector3[] points = new Vector3[_lineRenderer.positionCount];
+		_lineRenderer.GetPositions(points);
+
+		Vector2[] pointsList = new Vector2[_lineRenderer.positionCount];
+
+		for(int i=0; i<_lineRenderer.positionCount; i++)
+		{
+			pointsList[i] = points[i];
+		}
+
+		_edgeCollider.points = pointsList;
 	}
 }

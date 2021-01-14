@@ -56,7 +56,7 @@ public abstract class Knob : MonoBehaviour
 
 		Constants.C.knobs.Add(this);
 
-		LineDraw = Line.Create(transform.position, transform.position);
+		LineDraw = Line.Create(transform.position, transform.position, false);
 
 		ExtendedStart();
 	}
@@ -75,6 +75,11 @@ public abstract class Knob : MonoBehaviour
 			if (Input.GetMouseButton(2))
 			{
 				MoveToCursor();
+
+				if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKeyDown(KeyCode.Backspace))
+				{
+					Delete();
+				}
 			}
 			else
 			{
@@ -134,6 +139,34 @@ public abstract class Knob : MonoBehaviour
 		}
 	}
 
+	private void Delete()
+	{
+		if (GetType() == typeof(OutputKnob))
+		{
+			OutputKnob outputKnob = (OutputKnob) this;
+			
+			List<InputKnob> inputKnobs = new List<InputKnob>();
+			
+			foreach (var connection in outputKnob.Connections)
+			{
+				Destroy(connection.Value.gameObject);
+				inputKnobs.Add(connection.Key);
+			}
+			
+			inputKnobs.ForEach(x => x.Parent = null);
+		}
+		else
+		{
+			InputKnob inputKnob = (InputKnob) this;
+
+			inputKnob.Parent = null;
+		}
+		
+		Destroy(LineDraw.gameObject);
+		
+		Destroy(gameObject);
+	}
+
 	private void MoveToCursor()
 	{
 		var snap = Input.GetKey(KeyCode.LeftControl);
@@ -174,8 +207,11 @@ public abstract class Knob : MonoBehaviour
 		else
 		{
 			InputKnob inputKnob = (InputKnob) this;
-			var parentConnection = inputKnob.Parent.Connections[inputKnob];
-			parentConnection.UpdatePosition(parentConnection.GetNumPos() - 1, inputKnob.transform.position);
+			if (inputKnob.Parent != null)
+			{
+				var parentConnection = inputKnob.Parent.Connections[inputKnob];
+				parentConnection.UpdatePosition(parentConnection.GetNumPos() - 1, inputKnob.transform.position);
+			}
 		}
 
 		transform.position = worldPosOfMouse;
@@ -207,7 +243,9 @@ public abstract class Knob : MonoBehaviour
 			{
 				if (GetKnobTypes(this, selectedKnob, out var inputKnob, out var outputKnob))
 				{
-					inputKnob.Parent = outputKnob.Connections.ContainsKey(inputKnob) ? null : outputKnob;
+					inputKnob.Parent = null;
+					
+					inputKnob.Parent = outputKnob;
 				}
 			}
 		}

@@ -11,7 +11,7 @@ public class InputKnob : Knob
 		{
 			if (value != null)
 			{
-				var line = Line.Create(value.LineDraw, this);
+				var line = Line.Create(value.LineDraw, this, true);
 				value.Connections.Add(this, line);
 
 				var allPositions = line.GetAllPositions();
